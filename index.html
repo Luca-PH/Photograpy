@@ -59,25 +59,7 @@
         </div>
     </div>
       
-    <script>
-    var folder = "images/images_thumbnails/";
-
-    $.ajax({
-        url : folder,
-        success: function (data) {
-            $(data).find("a").attr("href", function (i, val) {
-                if( val.match(/\.(jpg|png|gif)$/) ) { 
-                    $("body").append( "<img src='"+ folder + val +"'>" );
-                } 
-            });
-        }
-        error: function()
-        {
-          $("body").append( "error");
-        }
-    });
-    </script>
-   
+    
     
     
      <!-- START HERE FOR INCLUDE HTML-->
