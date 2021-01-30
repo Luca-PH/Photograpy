@@ -66,10 +66,14 @@
         url : folder,
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
-                if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                if( val.match(/\.(jpg|png|gif)$/) ) { 
                     $("body").append( "<img src='"+ folder + val +"'>" );
                 } 
             });
+        }
+        error: function()
+        {
+          $("body").append( "error");
         }
     });
     </script>
